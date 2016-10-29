@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5EEA0E0F4CE613F0B028D5FF /* Pods_meal_finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849644BA4245243C6CEF6A0B /* Pods_meal_finder.framework */; };
 		C60C261C1DC557DF00A6EE4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60C261B1DC557DF00A6EE4E /* AppDelegate.swift */; };
 		C60C261E1DC557DF00A6EE4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60C261D1DC557DF00A6EE4E /* ViewController.swift */; };
 		C60C26211DC557DF00A6EE4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C60C261F1DC557DF00A6EE4E /* Main.storyboard */; };
 		C60C26231DC557DF00A6EE4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C60C26221DC557DF00A6EE4E /* Assets.xcassets */; };
 		C60C26261DC557E000A6EE4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C60C26241DC557E000A6EE4E /* LaunchScreen.storyboard */; };
+		C60C262E1DC55DCD00A6EE4E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C60C262D1DC55DCD00A6EE4E /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		82F512B361CED76B7D02DA9D /* Pods-meal_finder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meal_finder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-meal_finder/Pods-meal_finder.debug.xcconfig"; sourceTree = "<group>"; };
+		849644BA4245243C6CEF6A0B /* Pods_meal_finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meal_finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A995FBEB3BF994382C9EAE /* Pods-meal_finder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meal_finder.release.xcconfig"; path = "Pods/Target Support Files/Pods-meal_finder/Pods-meal_finder.release.xcconfig"; sourceTree = "<group>"; };
 		C60C26181DC557DF00A6EE4E /* meal_finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = meal_finder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60C261B1DC557DF00A6EE4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C60C261D1DC557DF00A6EE4E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,7 @@
 		C60C26221DC557DF00A6EE4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C60C26251DC557E000A6EE4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C60C26271DC557E000A6EE4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C60C262D1DC55DCD00A6EE4E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EEA0E0F4CE613F0B028D5FF /* Pods_meal_finder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74A064AA4AC6F365E55DA09D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				82F512B361CED76B7D02DA9D /* Pods-meal_finder.debug.xcconfig */,
+				93A995FBEB3BF994382C9EAE /* Pods-meal_finder.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AED9748ED0E20247D555FBB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				849644BA4245243C6CEF6A0B /* Pods_meal_finder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C60C260F1DC557DF00A6EE4E = {
 			isa = PBXGroup;
 			children = (
 				C60C261A1DC557DF00A6EE4E /* meal_finder */,
 				C60C26191DC557DF00A6EE4E /* Products */,
+				74A064AA4AC6F365E55DA09D /* Pods */,
+				AED9748ED0E20247D555FBB2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +86,7 @@
 				C60C26221DC557DF00A6EE4E /* Assets.xcassets */,
 				C60C26241DC557E000A6EE4E /* LaunchScreen.storyboard */,
 				C60C26271DC557E000A6EE4E /* Info.plist */,
+				C60C262D1DC55DCD00A6EE4E /* GoogleService-Info.plist */,
 			);
 			path = meal_finder;
 			sourceTree = "<group>";
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C60C262A1DC557E000A6EE4E /* Build configuration list for PBXNativeTarget "meal_finder" */;
 			buildPhases = (
+				480FFA98718C47EAC90974C4 /* [CP] Check Pods Manifest.lock */,
 				C60C26141DC557DF00A6EE4E /* Sources */,
 				C60C26151DC557DF00A6EE4E /* Frameworks */,
 				C60C26161DC557DF00A6EE4E /* Resources */,
+				757002321A8AE012B5864B5D /* [CP] Embed Pods Frameworks */,
+				A8F700D550DB10167B5778EB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,12 +154,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				C60C26261DC557E000A6EE4E /* LaunchScreen.storyboard in Resources */,
+				C60C262E1DC55DCD00A6EE4E /* GoogleService-Info.plist in Resources */,
 				C60C26231DC557DF00A6EE4E /* Assets.xcassets in Resources */,
 				C60C26211DC557DF00A6EE4E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		480FFA98718C47EAC90974C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		757002321A8AE012B5864B5D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-meal_finder/Pods-meal_finder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8F700D550DB10167B5778EB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-meal_finder/Pods-meal_finder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C60C26141DC557DF00A6EE4E /* Sources */ = {
@@ -258,6 +337,7 @@
 		};
 		C60C262B1DC557E000A6EE4E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82F512B361CED76B7D02DA9D /* Pods-meal_finder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = meal_finder/Info.plist;
@@ -270,6 +350,7 @@
 		};
 		C60C262C1DC557E000A6EE4E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93A995FBEB3BF994382C9EAE /* Pods-meal_finder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = meal_finder/Info.plist;
@@ -299,6 +380,7 @@
 				C60C262C1DC557E000A6EE4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
