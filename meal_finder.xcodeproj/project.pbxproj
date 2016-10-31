@@ -16,6 +16,9 @@
 		C60C262E1DC55DCD00A6EE4E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C60C262D1DC55DCD00A6EE4E /* GoogleService-Info.plist */; };
 		C65A4AF41DC7AE6400E2D635 /* AlamoGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A4AF31DC7AE6400E2D635 /* AlamoGet.swift */; };
 		C65A4AF61DC7AEAA00E2D635 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A4AF51DC7AEAA00E2D635 /* Constants.swift */; };
+		C6E70EF91DC7BD9C007E6D7A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E70EF71DC7BCC5007E6D7A /* SwiftyJSON.framework */; };
+		C6E70EFB1DC7BDDC007E6D7A /* SwiftyForJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E70EFA1DC7BDDC007E6D7A /* SwiftyForJson.swift */; };
+		C6E70EFD1DC7C70D007E6D7A /* jsonFile.json in Resources */ = {isa = PBXBuildFile; fileRef = C6E70EFC1DC7C70D007E6D7A /* jsonFile.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		C60C262D1DC55DCD00A6EE4E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C65A4AF31DC7AE6400E2D635 /* AlamoGet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamoGet.swift; sourceTree = "<group>"; };
 		C65A4AF51DC7AEAA00E2D635 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C6E70EF71DC7BCC5007E6D7A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../../Library/Developer/Xcode/DerivedData/meal_finder-aflifclfdvfhipglrusngciqjiia/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		C6E70EFA1DC7BDDC007E6D7A /* SwiftyForJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyForJson.swift; sourceTree = "<group>"; };
+		C6E70EFC1DC7C70D007E6D7A /* jsonFile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsonFile.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6E70EF91DC7BD9C007E6D7A /* SwiftyJSON.framework in Frameworks */,
 				5EEA0E0F4CE613F0B028D5FF /* Pods_meal_finder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,6 +65,7 @@
 		AED9748ED0E20247D555FBB2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C6E70EF71DC7BCC5007E6D7A /* SwiftyJSON.framework */,
 				849644BA4245243C6CEF6A0B /* Pods_meal_finder.framework */,
 			);
 			name = Frameworks;
@@ -93,6 +101,8 @@
 				C60C262D1DC55DCD00A6EE4E /* GoogleService-Info.plist */,
 				C65A4AF31DC7AE6400E2D635 /* AlamoGet.swift */,
 				C65A4AF51DC7AEAA00E2D635 /* Constants.swift */,
+				C6E70EFA1DC7BDDC007E6D7A /* SwiftyForJson.swift */,
+				C6E70EFC1DC7C70D007E6D7A /* jsonFile.json */,
 			);
 			path = meal_finder;
 			sourceTree = "<group>";
@@ -163,6 +173,7 @@
 				C60C262E1DC55DCD00A6EE4E /* GoogleService-Info.plist in Resources */,
 				C60C26231DC557DF00A6EE4E /* Assets.xcassets in Resources */,
 				C60C26211DC557DF00A6EE4E /* Main.storyboard in Resources */,
+				C6E70EFD1DC7C70D007E6D7A /* jsonFile.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +235,7 @@
 				C65A4AF41DC7AE6400E2D635 /* AlamoGet.swift in Sources */,
 				C60C261E1DC557DF00A6EE4E /* ViewController.swift in Sources */,
 				C60C261C1DC557DF00A6EE4E /* AppDelegate.swift in Sources */,
+				C6E70EFB1DC7BDDC007E6D7A /* SwiftyForJson.swift in Sources */,
 				C65A4AF61DC7AEAA00E2D635 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
