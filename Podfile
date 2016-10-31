@@ -6,6 +6,7 @@ target 'meal_finder' do
   use_frameworks!
   pod 'Firebase/Core'  
   pod 'Alamofire', '~> 4.0'
+  pod 'SwiftyJSON', '3.1.1'
   # Pods for meal_finder
 
 end
