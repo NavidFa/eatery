@@ -12,6 +12,7 @@ typealias DownloadComplete = () -> () // Tell our function when we are complete,
 
 
 func URL(number: String) -> String {
-    let myURL = "https://swapi.co/api/people/\(number)/"
+    //let myURL = "https://swapi.co/api/people/\(number)/"
+    let myURL = "https://meal-find-api.herokuapp.com/dishes"
     return myURL
 }
