@@ -8,4 +8,10 @@
 
 import Foundation
 
-let URL = "http://swapi.co/api/"
+typealias DownloadComplete = () -> () // Tell our function when we are complete, for AlamoFire use
+
+
+func URL(number: String) -> String {
+    let myURL = "https://swapi.co/api/people/\(number)/"
+    return myURL
+}
