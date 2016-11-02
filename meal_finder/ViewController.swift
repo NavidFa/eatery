@@ -17,6 +17,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     
     
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,10 +31,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     var _arname: String!
     var arname = [String]()
@@ -42,6 +39,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         Alamofire.request("https://meal-find-api.herokuapp.com/dishes").responseJSON { response in
             
             let result = response.result
+
+            /*
+            
+            if let json = result.value as? [JSON] {
+                print(json)
+            }*/
             
             if let dict = result.value as? [Dictionary<String, AnyObject>] {
                 print(dict.count)
@@ -72,6 +75,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell", for: indexPath)
+        //var name = arname[indexPath.row]
+        //cell.cellLabel?.text = "Hello"
+        let currentObj = arname[indexPath.row]
+        cell.textLabel?.text = currentObj
+        
         return cell
     }
     

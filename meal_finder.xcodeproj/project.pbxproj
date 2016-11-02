@@ -16,6 +16,7 @@
 		C60C262E1DC55DCD00A6EE4E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C60C262D1DC55DCD00A6EE4E /* GoogleService-Info.plist */; };
 		C65A4AF41DC7AE6400E2D635 /* AlamoGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A4AF31DC7AE6400E2D635 /* AlamoGet.swift */; };
 		C65A4AF61DC7AEAA00E2D635 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65A4AF51DC7AEAA00E2D635 /* Constants.swift */; };
+		C6B5531E1DCA8319003DE71A /* myCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B5531D1DCA8319003DE71A /* myCell.swift */; };
 		C6E70EF91DC7BD9C007E6D7A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E70EF71DC7BCC5007E6D7A /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		C60C262D1DC55DCD00A6EE4E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C65A4AF31DC7AE6400E2D635 /* AlamoGet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamoGet.swift; sourceTree = "<group>"; };
 		C65A4AF51DC7AEAA00E2D635 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C6B5531D1DCA8319003DE71A /* myCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myCell.swift; sourceTree = "<group>"; };
 		C6E70EF71DC7BCC5007E6D7A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../../Library/Developer/Xcode/DerivedData/meal_finder-aflifclfdvfhipglrusngciqjiia/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +99,7 @@
 				C60C262D1DC55DCD00A6EE4E /* GoogleService-Info.plist */,
 				C65A4AF31DC7AE6400E2D635 /* AlamoGet.swift */,
 				C65A4AF51DC7AEAA00E2D635 /* Constants.swift */,
+				C6B5531D1DCA8319003DE71A /* myCell.swift */,
 			);
 			path = meal_finder;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			files = (
 				C65A4AF41DC7AE6400E2D635 /* AlamoGet.swift in Sources */,
 				C60C261E1DC557DF00A6EE4E /* ViewController.swift in Sources */,
+				C6B5531E1DCA8319003DE71A /* myCell.swift in Sources */,
 				C60C261C1DC557DF00A6EE4E /* AppDelegate.swift in Sources */,
 				C65A4AF61DC7AEAA00E2D635 /* Constants.swift in Sources */,
 			);
