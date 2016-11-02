@@ -67,6 +67,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="xVy-SC-azg"/>
                     <connections>
+                        <outlet property="tableView" destination="8T2-wN-Bmp" id="nWC-R6-ElG"/>
                         <outlet property="testName" destination="cnm-sX-4Q2" id="Qi3-X1-fgj"/>
                     </connections>
                 </viewController>

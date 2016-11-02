@@ -10,10 +10,12 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var alamoget: AlamoGet!
     
     @IBOutlet weak var testName: UILabel!
+    @IBOutlet weak var tableView: UITableView!
+    
     
 
     override func viewDidLoad() {
