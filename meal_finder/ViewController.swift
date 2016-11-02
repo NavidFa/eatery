@@ -11,12 +11,17 @@ import Alamofire
 import SwiftyJSON
 
 class ViewController: UIViewController {
+    var alamoget = AlamoGet()
+    
+    @IBOutlet weak var testName: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        Alamo()
-        parseJSON()
+        alamoget.download {
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {
