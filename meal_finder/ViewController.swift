@@ -25,7 +25,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         alamoget = AlamoGet()
         // Do any additional setup after loading the view, typically from a nib.
-        alamoget.download {
+        download {
             self.updateMainUI()
         }
     }
@@ -35,12 +35,39 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Dispose of any resources that can be recreated.
     }
     
+    var _arname: String!
+    var arname = [String]()
+    
+    func download(completed: @escaping DownloadComplete) {
+        Alamofire.request("https://meal-find-api.herokuapp.com/dishes").responseJSON { response in
+            
+            let result = response.result
+            
+            if let dict = result.value as? [Dictionary<String, AnyObject>] {
+                print(dict.count)
+                for obj in dict {
+                    if let a = obj["name"] as? String {
+                        //print(a)
+                        self.arname.append(a)
+                        print(self.arname)
+                    }
+                }
+                self.tableView.reloadData()
+                
+                
+                
+            }
+            completed()
+        }
+        completed()
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return arname.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -49,7 +76,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func updateMainUI() {
-        testName.text = alamoget.name
+        testName.text = "\(alamoget.arname.count)"
     }
 
 

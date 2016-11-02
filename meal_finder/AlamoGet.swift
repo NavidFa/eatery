@@ -21,22 +21,8 @@ class AlamoGet {
         return _name
     }
     
-    func download(completed: @escaping DownloadComplete) {
-        Alamofire.request("https://meal-find-api.herokuapp.com/dishes").responseJSON { response in
-            
-            let result = response.result
-            
-            if let dict = result.value as? [Dictionary<String, AnyObject>] {
-                //print(dict)
-                if let name = dict[0]["name"] as? String {
-                    //print(name)
-                    self._name = name
-                    print(self._name)
-                }
-                
-            }
-            completed()
-        }
-        completed()
-    }
+    var _arname: String!
+    var arname = [String]()
+    
+    
 }
