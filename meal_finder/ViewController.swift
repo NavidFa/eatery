@@ -35,7 +35,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var _arname: String!
     var arname = [String]()
     
+    
+    
     func download(completed: @escaping DownloadComplete) {
+        
         Alamofire.request("https://meal-find-api.herokuapp.com/dishes").responseJSON { response in
             
             let result = response.result
