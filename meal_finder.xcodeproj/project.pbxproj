@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2F86E3391DCBA392002114A1 /* foodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F86E3381DCBA392002114A1 /* foodCell.swift */; };
+		2F86E3751DCC0F3E002114A1 /* DishesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F86E3741DCC0F3E002114A1 /* DishesViewController.swift */; };
 		5EEA0E0F4CE613F0B028D5FF /* Pods_meal_finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849644BA4245243C6CEF6A0B /* Pods_meal_finder.framework */; };
 		C60C261C1DC557DF00A6EE4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60C261B1DC557DF00A6EE4E /* AppDelegate.swift */; };
 		C60C261E1DC557DF00A6EE4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60C261D1DC557DF00A6EE4E /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		2F86E3381DCBA392002114A1 /* foodCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = foodCell.swift; sourceTree = "<group>"; };
+		2F86E3741DCC0F3E002114A1 /* DishesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DishesViewController.swift; sourceTree = "<group>"; };
 		82F512B361CED76B7D02DA9D /* Pods-meal_finder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meal_finder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-meal_finder/Pods-meal_finder.debug.xcconfig"; sourceTree = "<group>"; };
 		849644BA4245243C6CEF6A0B /* Pods_meal_finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meal_finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A995FBEB3BF994382C9EAE /* Pods-meal_finder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meal_finder.release.xcconfig"; path = "Pods/Target Support Files/Pods-meal_finder/Pods-meal_finder.release.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				C60C261B1DC557DF00A6EE4E /* AppDelegate.swift */,
+				2F86E3741DCC0F3E002114A1 /* DishesViewController.swift */,
 				C60C261D1DC557DF00A6EE4E /* ViewController.swift */,
 				2F86E3381DCBA392002114A1 /* foodCell.swift */,
 				C60C261F1DC557DF00A6EE4E /* Main.storyboard */,
@@ -235,6 +238,7 @@
 				C65A4AF41DC7AE6400E2D635 /* AlamoGet.swift in Sources */,
 				C60C261E1DC557DF00A6EE4E /* ViewController.swift in Sources */,
 				C6B5531E1DCA8319003DE71A /* myCell.swift in Sources */,
+				2F86E3751DCC0F3E002114A1 /* DishesViewController.swift in Sources */,
 				2F86E3391DCBA392002114A1 /* foodCell.swift in Sources */,
 				C60C261C1DC557DF00A6EE4E /* AppDelegate.swift in Sources */,
 				C65A4AF61DC7AEAA00E2D635 /* Constants.swift in Sources */,
