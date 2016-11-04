@@ -19,17 +19,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Landing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9I-A8-MJF">
-                                <frame key="frameInset" minX="125" minY="64" width="124" height="79"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="feast1" translatesAutoresizingMaskIntoConstraints="NO" id="Ubk-lA-h18">
+                                <frame key="frameInset" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aoo-QS-D1p">
-                                <frame key="frameInset" minX="125" minY="318" width="124" height="30"/>
+                                <frame key="frameInset" minX="27" minY="283" width="327" height="99"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Next Page"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="90"/>
+                                <state key="normal" title="eatery">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <segue destination="gk3-0w-TPg" kind="show" id="3sF-Zh-WeS"/>
                                 </connections>
@@ -43,7 +43,7 @@
             </objects>
             <point key="canvasLocation" x="-460" y="436.73163418290858"/>
         </scene>
-        <!--Title-->
+        <!--Select Dietry Restrictions-->
         <scene sceneID="y3Z-Ly-urM">
             <objects>
                 <viewController id="gk3-0w-TPg" customClass="DishesViewController" customModule="meal_finder" customModuleProvider="target" sceneMemberID="viewController">
@@ -75,90 +75,107 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fcq-6l-QQc">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fcq-6l-QQc">
                                 <frame key="frameInset" minX="16" minY="66" width="175" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Vegan">
-                                    <color key="titleShadowColor" red="0.5598898886" green="1" blue="0.47928497390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                <state key="normal" title="Vegan" backgroundImage="WhitePlateBlackBackground">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="addVeganToArray:" destination="gk3-0w-TPg" eventType="touchUpInside" id="YDB-do-Ku5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6b-Fb-lmh">
-                                <frame key="frameInset" minX="184" minY="66" width="175" height="140"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6b-Fb-lmh">
+                                <frame key="frameInset" minX="179" minY="66" width="175" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="No Shellfish">
-                                    <color key="titleShadowColor" red="0.5598898886" green="1" blue="0.47928497390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                <state key="normal" title="No Shellfish" backgroundImage="WhitePlateBlackBackground">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="addExcludesShellfishToArray:" destination="gk3-0w-TPg" eventType="touchUpInside" id="Pqt-Q5-moN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yae-8N-SdU">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yae-8N-SdU">
                                 <frame key="frameInset" minX="184" minY="214" width="175" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="No Dairy">
-                                    <color key="titleShadowColor" red="0.5598898886" green="1" blue="0.47928497390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                <state key="normal" title="No Dairy" backgroundImage="WhitePlateBlackBackground">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="addExcludesDairyToArray:" destination="gk3-0w-TPg" eventType="touchUpInside" id="ROa-95-fL1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGW-Gz-Wh8">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGW-Gz-Wh8">
                                 <frame key="frameInset" minX="16" minY="214" width="175" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Vegetarian">
-                                    <color key="titleShadowColor" red="0.5598898886" green="1" blue="0.47928497390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                <state key="normal" title="Vegetarian" backgroundImage="WhitePlateBlackBackground">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="addVegetarianToArray:" destination="gk3-0w-TPg" eventType="touchUpInside" id="Tbf-dE-kaw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZxP-Ok-3LS">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZxP-Ok-3LS">
                                 <frame key="frameInset" minX="16" minY="362" width="175" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Gluten-Free ">
-                                    <color key="titleShadowColor" red="0.5598898886" green="1" blue="0.47928497390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                <state key="normal" title="Gluten-Free " backgroundImage="WhitePlateBlackBackground">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="addGlutenFreeToArray:" destination="gk3-0w-TPg" eventType="touchUpInside" id="Sf5-fL-tux"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSb-H7-jHY">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSb-H7-jHY">
                                 <frame key="frameInset" minX="184" minY="362" width="175" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="No Egg">
-                                    <color key="titleShadowColor" red="0.5598898886" green="1" blue="0.47928497390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                <state key="normal" title="No Egg" backgroundImage="WhitePlateBlackBackground">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="addExcludesEggToArray:" destination="gk3-0w-TPg" eventType="touchUpInside" id="JOf-F8-e5N"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNm-cn-Rdi">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNm-cn-Rdi">
                                 <frame key="frameInset" minX="16" minY="510" width="175" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Paleo">
-                                    <color key="titleShadowColor" red="0.5598898886" green="1" blue="0.47928497390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                <state key="normal" title="Paleo" backgroundImage="WhitePlateBlackBackground">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="addPaleoToArray:" destination="gk3-0w-TPg" eventType="touchUpInside" id="ryM-bS-4gD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAc-h8-BVI">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAc-h8-BVI">
                                 <frame key="frameInset" minX="184" minY="510" width="175" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="No Nuts">
-                                    <color key="titleShadowColor" red="0.5598898886" green="1" blue="0.47928497390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                <state key="normal" title="No Nuts" backgroundImage="WhitePlateBlackBackground">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="addExcludesNutsToArray:" destination="gk3-0w-TPg" eventType="touchUpInside" id="TTK-Ar-87m"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="Jgh-n4-Psf">
+                    <navigationItem key="navigationItem" title="Select Dietry Restrictions" id="Jgh-n4-Psf">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="XTl-QY-kDB"/>
                         <barButtonItem key="rightBarButtonItem" title="Next" id="gCK-Va-wU3">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="show" identifier="ShowFoodSegue" id="at0-rk-aVD"/>
@@ -184,7 +201,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ko5-QH-C6y">
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="View B"/>
+                                <state key="normal" title="Find This Dish Nearby">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <segue destination="0OC-YE-esl" kind="show" id="RKw-5m-TEz"/>
                                 </connections>
@@ -193,35 +212,43 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="6yI-eb-Yhr"/>
                                 </constraints>
-                                <state key="normal" title="Back"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="280" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oBg-mw-14B">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="foodCell" id="N8q-We-kVs" customClass="foodCell" customModule="meal_finder" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="280"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N8q-We-kVs" id="IXn-8l-JzJ">
-                                            <frame key="frameInset" width="375" height="279"/>
+                                            <frame key="frameInset" width="375" height="280"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlZ-30-fGZ">
-                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="17"/>
+                                                    <color key="textColor" red="0.9778173575129534" green="0.9778173575129534" blue="0.9778173575129534" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6hU-lF-5l1"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6hU-lF-5l1">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="375" id="4Fh-3S-UHc"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="hlZ-30-fGZ" firstAttribute="leading" secondItem="IXn-8l-JzJ" secondAttribute="leadingMargin" constant="20" id="1u0-ZJ-EYI"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="hlZ-30-fGZ" secondAttribute="bottom" id="4rZ-JG-c3N"/>
                                                 <constraint firstItem="6hU-lF-5l1" firstAttribute="top" secondItem="IXn-8l-JzJ" secondAttribute="topMargin" constant="-3" id="5ON-wr-W4S"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="hlZ-30-fGZ" secondAttribute="trailing" constant="20" id="8X5-wr-dGt"/>
-                                                <constraint firstItem="6hU-lF-5l1" firstAttribute="leading" secondItem="IXn-8l-JzJ" secondAttribute="leadingMargin" id="Hjr-ZD-0t7"/>
                                                 <constraint firstAttribute="trailing" secondItem="6hU-lF-5l1" secondAttribute="trailing" id="KOd-O4-u3M"/>
                                                 <constraint firstItem="hlZ-30-fGZ" firstAttribute="top" secondItem="6hU-lF-5l1" secondAttribute="bottom" constant="8" id="jiC-JA-mHY"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <connections>
                                             <outlet property="foodImageView" destination="6hU-lF-5l1" id="cXo-kJ-jT7"/>
                                             <outlet property="foodLabel" destination="hlZ-30-fGZ" id="j8F-Cy-9yc"/>
@@ -234,7 +261,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Ko5-QH-C6y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="13Z-Vn-Buc"/>
                             <constraint firstItem="9U1-pJ-U2V" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Gr7-mf-YnO"/>
@@ -291,8 +318,15 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="5Qg-64-sqU"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2016-11-03 at 8.25.30 PM" translatesAutoresizingMaskIntoConstraints="NO" id="GzI-sh-Kf7"/>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GzI-sh-Kf7" firstAttribute="leading" secondItem="i16-7i-wyY" secondAttribute="leading" id="Nqb-lL-7k0"/>
+                            <constraint firstItem="EBh-oq-TuV" firstAttribute="top" secondItem="GzI-sh-Kf7" secondAttribute="bottom" id="pdu-XQ-3zH"/>
+                            <constraint firstAttribute="trailing" secondItem="GzI-sh-Kf7" secondAttribute="trailing" id="tOI-j4-mCZ"/>
+                            <constraint firstItem="GzI-sh-Kf7" firstAttribute="top" secondItem="i16-7i-wyY" secondAttribute="top" id="vWZ-ZF-s7I"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LET-uG-cTb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -360,8 +394,13 @@
             <point key="canvasLocation" x="-1399.2" y="436.73163418290858"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Screen Shot 2016-11-03 at 8.25.30 PM" width="546" height="973"/>
+        <image name="WhitePlateBlackBackground" width="500" height="400"/>
+        <image name="feast1" width="494" height="720"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="RKw-5m-TEz"/>
-        <segue reference="at0-rk-aVD"/>
+        <segue reference="5Qg-64-sqU"/>
     </inferredMetricsTieBreakers>
 </document>
