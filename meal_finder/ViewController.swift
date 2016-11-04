@@ -10,10 +10,11 @@ import UIKit
 import Alamofire
 //import SwiftyJSON
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var alamoget: AlamoGet!
     
     @IBOutlet weak var testName: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
     
     
@@ -24,7 +25,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        download{
+            
+        }
 
     }
 
@@ -43,85 +46,85 @@ class ViewController: UIViewController {
     
    var foodRestrictionArray:[String] = ["all"]
     
-    @IBAction func addVeganToArray(_ sender: AnyObject) {
-        if foodRestrictionArray.contains("vegan"){
-            foodRestrictionArray = foodRestrictionArray.filter{$0 != "vegan"}
-        } else {
-            foodRestrictionArray.append("vegan")
-        }
-        print(foodRestrictionArray)
-    }
-    
-    
-    @IBAction func addVegetarianToArray(_ sender: AnyObject) {
-        if foodRestrictionArray.contains("vegetarian"){
-            foodRestrictionArray = foodRestrictionArray.filter{$0 != "vegetarian"}
-        } else {
-            foodRestrictionArray.append("vegetarian")
-        }
-        print(foodRestrictionArray)
-    }
-    
-    
-    @IBAction func addGlutenFreeToArray(_ sender: AnyObject) {
-        if foodRestrictionArray.contains("glutenFree"){
-            foodRestrictionArray = foodRestrictionArray.filter{$0 != "glutenFree"}
-        } else {
-            foodRestrictionArray.append("glutenFree")
-        }
-        print(foodRestrictionArray)
-    }
-    
-    
-    @IBAction func addPaleoToArray(_ sender: AnyObject) {
-        if foodRestrictionArray.contains("paleo"){
-            foodRestrictionArray = foodRestrictionArray.filter{$0 != "paleo"}
-        } else {
-            foodRestrictionArray.append("paleo")
-        }
-        print(foodRestrictionArray)
-    }
-    
-    
-    @IBAction func addExcludesShellfishToArray(_ sender: AnyObject) {
-        if foodRestrictionArray.contains("excludesShellfish"){
-            foodRestrictionArray = foodRestrictionArray.filter{$0 != "excludesShellfish"}
-        } else {
-            foodRestrictionArray.append("excludesShellfish")
-        }
-        print(foodRestrictionArray)
-    }
-    
-    
-    @IBAction func addExcludesDairyToArray(_ sender: AnyObject) {
-        if foodRestrictionArray.contains("excludesDairy"){
-            foodRestrictionArray = foodRestrictionArray.filter{$0 != "excludesDairy"}
-        } else {
-            foodRestrictionArray.append("excludesDairy")
-        }
-        print(foodRestrictionArray)
-    }
-    
-    
-    @IBAction func addExcludesEggToArray(_ sender: AnyObject) {
-        if foodRestrictionArray.contains("excludesEgg"){
-            foodRestrictionArray = foodRestrictionArray.filter{$0 != "excludesEgg"}
-        } else {
-            foodRestrictionArray.append("excludesEgg")
-        }
-        print(foodRestrictionArray)
-        
-    }
-    
-    
-    @IBAction func addExcludesNutsToArray(_ sender: AnyObject) {
-        if foodRestrictionArray.contains("excludesNuts"){
-            foodRestrictionArray = foodRestrictionArray.filter{$0 != "excludesNuts"}
-        } else {
-            foodRestrictionArray.append("excludesNuts")
-        }
-        print(foodRestrictionArray)
-    }
+//    @IBAction func addVeganToArray(_ sender: AnyObject) {
+//        if foodRestrictionArray.contains("vegan"){
+//            foodRestrictionArray = foodRestrictionArray.filter{$0 != "vegan"}
+//        } else {
+//            foodRestrictionArray.append("vegan")
+//        }
+//        print(foodRestrictionArray)
+//    }
+//    
+//    
+//    @IBAction func addVegetarianToArray(_ sender: AnyObject) {
+//        if foodRestrictionArray.contains("vegetarian"){
+//            foodRestrictionArray = foodRestrictionArray.filter{$0 != "vegetarian"}
+//        } else {
+//            foodRestrictionArray.append("vegetarian")
+//        }
+//        print(foodRestrictionArray)
+//    }
+//    
+//    
+//    @IBAction func addGlutenFreeToArray(_ sender: AnyObject) {
+//        if foodRestrictionArray.contains("glutenFree"){
+//            foodRestrictionArray = foodRestrictionArray.filter{$0 != "glutenFree"}
+//        } else {
+//            foodRestrictionArray.append("glutenFree")
+//        }
+//        print(foodRestrictionArray)
+//    }
+//    
+//    
+//    @IBAction func addPaleoToArray(_ sender: AnyObject) {
+//        if foodRestrictionArray.contains("paleo"){
+//            foodRestrictionArray = foodRestrictionArray.filter{$0 != "paleo"}
+//        } else {
+//            foodRestrictionArray.append("paleo")
+//        }
+//        print(foodRestrictionArray)
+//    }
+//    
+//    
+//    @IBAction func addExcludesShellfishToArray(_ sender: AnyObject) {
+//        if foodRestrictionArray.contains("excludesShellfish"){
+//            foodRestrictionArray = foodRestrictionArray.filter{$0 != "excludesShellfish"}
+//        } else {
+//            foodRestrictionArray.append("excludesShellfish")
+//        }
+//        print(foodRestrictionArray)
+//    }
+//    
+//    
+//    @IBAction func addExcludesDairyToArray(_ sender: AnyObject) {
+//        if foodRestrictionArray.contains("excludesDairy"){
+//            foodRestrictionArray = foodRestrictionArray.filter{$0 != "excludesDairy"}
+//        } else {
+//            foodRestrictionArray.append("excludesDairy")
+//        }
+//        print(foodRestrictionArray)
+//    }
+//    
+//    
+//    @IBAction func addExcludesEggToArray(_ sender: AnyObject) {
+//        if foodRestrictionArray.contains("excludesEgg"){
+//            foodRestrictionArray = foodRestrictionArray.filter{$0 != "excludesEgg"}
+//        } else {
+//            foodRestrictionArray.append("excludesEgg")
+//        }
+//        print(foodRestrictionArray)
+//        
+//    }
+//    
+//    
+//    @IBAction func addExcludesNutsToArray(_ sender: AnyObject) {
+//        if foodRestrictionArray.contains("excludesNuts"){
+//            foodRestrictionArray = foodRestrictionArray.filter{$0 != "excludesNuts"}
+//        } else {
+//            foodRestrictionArray.append("excludesNuts")
+//        }
+//        print(foodRestrictionArray)
+//    }
     
     
     @IBAction func sendPostDataToApi(_ sender: AnyObject) {
@@ -165,7 +168,7 @@ class ViewController: UIViewController {
                         // let mainImageURL = obj["photoUrl"] as! String
                         // debugPrint(obj["photoUrl"]!)
                         let nameOfDish = obj["name"] as! String
-                        let urlString = obj["testPhotoUrl"]
+                        let urlString = obj["photoUrl"]
                         if let url = NSURL(string: (urlString as? String)!){
                             
                             print(url)
@@ -176,6 +179,9 @@ class ViewController: UIViewController {
                                 //print(self.posts)
                                 
                             }
+                            
+                            self.tableView.reloadData()
+                            
                         }
                     }
                     print(self.posts)
@@ -238,29 +244,50 @@ class ViewController: UIViewController {
                                     //        completed()
     }
     
-
     
+    
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return posts.count
+    }
+    
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell") as! foodCell
+        
+        //let mainImageView = cell?.viewWithTag(2) as! UIImageView
+        
+        //mainImageView.image = posts[indexPath.row].mainImage
+        
+        
+        cell.foodImageView.image =  posts[indexPath.row].mainImage
+        
+        cell.foodLabel.text = posts[indexPath.row].name
+        
+        return cell
+    }
+    
+
+//    
 //    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-////         let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell", for: indexPath) as UITableViewCell
-////        
-//        //let newLabel = "yooo" as UILabel
-//        //mainLabel.text = cell?.newLabel
+//         let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell", for: indexPath) as UITableViewCell
 //        
-//        //var name = arname[indexPath.row]
-//        //cell.cellLabel?.text = "Hello"
+//        let newLabel = "yooo" as UILabel
+//        mainLabel.text = cell?.newLabel
 //        
-////        let mainImageView = cell?.viewWithTag(2) as! UIImageView
-////        
-////        mainImageView.image = posts[indexPath.row].mainImage
-////        
-////        let mainLabel = cell?.viewWithTag(1) as! UILabel
-////        
-////        mainLabel.text = posts[indexPath.row].name
+//        var name = arname[indexPath.row]
+//        cell.cellLabel?.text = "Hello"
 //        
-////        let currentObj = arname[indexPath.row]
-////        cell.textLabel?.text = currentObj
+//        let mainImageView = cell?.viewWithTag(2) as! UIImageView
 //        
-////        return cell!
+//        mainImageView.image = posts[indexPath.row].mainImage
+//        
+//        let mainLabel = cell?.viewWithTag(1) as! UILabel
+//        
+//        mainLabel.text = posts[indexPath.row].name
+//        
+//        let currentObj = arname[indexPath.row]
+//        cell.textLabel?.text = currentObj
+//        
+//        return cell!
 //        
 //        return UITableViewCell
 //    }
