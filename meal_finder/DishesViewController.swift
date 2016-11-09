@@ -10,10 +10,33 @@ import UIKit
 
 class DishesViewController: UIViewController {
 
+    @IBOutlet weak var backgroundImg: UIImageView!
+    
     var foodRestrictionArray:[String] = ["all"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //only apply the blur if the user hasn't disabled transparency effects
+//        if !UIAccessibilityIsReduceTransparencyEnabled() {
+//            self.view.backgroundColor = UIColor.clear
+//            
+//            let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
+//            let blurEffectView = UIVisualEffectView(effect: blurEffect)
+//            //always fill the view
+//            blurEffectView.frame = self.view.bounds
+//            blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//            
+//            self.view.addSubview(blurEffectView) //if you have more UIViews, use an insertSubview API to place it where needed
+//        } else {
+//            self.view.backgroundColor = UIColor.black
+//        }
+        
+//        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.extraLight)
+//        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+//        blurEffectView.frame = view.bounds
+//        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//        view.addSubview(blurEffectView)
 
         // Do any additional setup after loading the view.
     }
@@ -41,9 +64,9 @@ class DishesViewController: UIViewController {
     }
     
     
-
-
-    @IBAction func addVeganToArray(_ sender: AnyObject) {
+    
+    @IBAction func addVeganAndToggleButton(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
         if foodRestrictionArray.contains("vegan"){
             foodRestrictionArray = foodRestrictionArray.filter{$0 != "vegan"}
         } else {
@@ -51,9 +74,16 @@ class DishesViewController: UIViewController {
         }
         print(foodRestrictionArray)
     }
+
+
+    @IBAction func addVeganToArray(_ sender: AnyObject) {
+      
+    }
     
     
-    @IBAction func addVegetarianToArray(_ sender: AnyObject) {
+    
+    @IBAction func addVegetarianAndToggle(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
         if foodRestrictionArray.contains("vegetarian"){
             foodRestrictionArray = foodRestrictionArray.filter{$0 != "vegetarian"}
         } else {
@@ -62,8 +92,13 @@ class DishesViewController: UIViewController {
         print(foodRestrictionArray)
     }
     
+    @IBAction func addVegetarianToArray(_ sender: AnyObject) {
+
+    }
     
-    @IBAction func addGlutenFreeToArray(_ sender: AnyObject) {
+    
+    @IBAction func addGlutenFreeAndToggle(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
         if foodRestrictionArray.contains("glutenFree"){
             foodRestrictionArray = foodRestrictionArray.filter{$0 != "glutenFree"}
         } else {
@@ -72,8 +107,13 @@ class DishesViewController: UIViewController {
         print(foodRestrictionArray)
     }
     
+    @IBAction func addGlutenFreeToArray(_ sender: AnyObject) {
+
+    }
     
-    @IBAction func addPaleoToArray(_ sender: AnyObject) {
+    
+    @IBAction func addPaleoAndToggle(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
         if foodRestrictionArray.contains("paleo"){
             foodRestrictionArray = foodRestrictionArray.filter{$0 != "paleo"}
         } else {
@@ -82,8 +122,12 @@ class DishesViewController: UIViewController {
         print(foodRestrictionArray)
     }
     
+    @IBAction func addPaleoToArray(_ sender: AnyObject) {
+    }
     
-    @IBAction func addExcludesShellfishToArray(_ sender: AnyObject) {
+    
+    @IBAction func addExcludesShellfishAndToggle(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
         if foodRestrictionArray.contains("excludesShellfish"){
             foodRestrictionArray = foodRestrictionArray.filter{$0 != "excludesShellfish"}
         } else {
@@ -92,8 +136,12 @@ class DishesViewController: UIViewController {
         print(foodRestrictionArray)
     }
     
+    @IBAction func addExcludesShellfishToArray(_ sender: AnyObject) {
+    }
     
-    @IBAction func addExcludesDairyToArray(_ sender: AnyObject) {
+    
+    @IBAction func addExcludesDairyAndToggle(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
         if foodRestrictionArray.contains("excludesDairy"){
             foodRestrictionArray = foodRestrictionArray.filter{$0 != "excludesDairy"}
         } else {
@@ -102,25 +150,34 @@ class DishesViewController: UIViewController {
         print(foodRestrictionArray)
     }
     
+    @IBAction func addExcludesDairyToArray(_ sender: AnyObject) {
+    }
     
-    @IBAction func addExcludesEggToArray(_ sender: AnyObject) {
+    
+    @IBAction func addExcludesEggAndToggle(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
         if foodRestrictionArray.contains("excludesEgg"){
             foodRestrictionArray = foodRestrictionArray.filter{$0 != "excludesEgg"}
         } else {
             foodRestrictionArray.append("excludesEgg")
         }
         print(foodRestrictionArray)
-        
     }
     
+    @IBAction func addExcludesEggToArray(_ sender: AnyObject) {
+    }
     
-    @IBAction func addExcludesNutsToArray(_ sender: AnyObject) {
+    @IBAction func addExcludesNutsAndToggle(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
         if foodRestrictionArray.contains("excludesNuts"){
             foodRestrictionArray = foodRestrictionArray.filter{$0 != "excludesNuts"}
         } else {
             foodRestrictionArray.append("excludesNuts")
         }
         print(foodRestrictionArray)
+    }
+    
+    @IBAction func addExcludesNutsToArray(_ sender: AnyObject) {
     }
 
 }
