@@ -7,14 +7,20 @@
 //
 
 import UIKit
+import CoreLocation
+import MapKit
 import Alamofire
 //import SwiftyJSON
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
     var alamoget: AlamoGet!
     
     @IBOutlet weak var testName: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var map: MKMapView!
+    var locationManager: CLLocationManager!
+
+
     
     
     
@@ -24,6 +30,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         download{
             

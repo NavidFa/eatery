@@ -145,8 +145,7 @@
 				TargetAttributes = {
 					C60C26171DC557DF00A6EE4E = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = HU63XFHZ3S;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -365,7 +364,7 @@
 			baseConfigurationReference = 82F512B361CED76B7D02DA9D /* Pods-meal_finder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = HU63XFHZ3S;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = meal_finder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rootapps.meal-finder";
@@ -379,7 +378,7 @@
 			baseConfigurationReference = 93A995FBEB3BF994382C9EAE /* Pods-meal_finder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = HU63XFHZ3S;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = meal_finder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rootapps.meal-finder";
